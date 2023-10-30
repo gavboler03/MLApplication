@@ -11,3 +11,7 @@ A PassiveAgressive Classifier algorithm could be used to train the model. In thi
 ## Resources 
 
 Many sources discussing this use some form of tree such as a decision tree or random forest. We learned about Passive-Aggresive algorithms from GeeksforGeeks. This will allow us to train our model which is processing over 6,000 news headlines. There is a possibility that there will be a combined dataset containing over 20,000 unique headlines.
+
+## GitHub Link
+
+https://github.com/gavboler03/MLApplication
