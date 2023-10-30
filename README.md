@@ -6,7 +6,7 @@ Fake news circulating is one of the main issues with media in the 21st century. 
 
 ## Approach
 
- A PassiveAgressive Classifier algorithm could be used to train the model. In this algorithm, if the model makes a correct prediction, nothing is updated to the model. However, if there is an incorrect prediction, the model is changed to make it correct. Additionally, a TfidfVectorizer can be used to calculate the frequency of certain words/names to train the model. The TfidfVectorizer will check the frequency of words in the dataset. An alternative or addition to the TfidfVectorizer would be the Decision Tree. There may be some trial and error periods testing different models and tracking performance based on each model to make the most efficient decision. Lastly, a docker container will be used at the end of the project. 
+A PassiveAgressive Classifier algorithm could be used to train the model. In this algorithm, if the model makes a correct prediction, nothing is updated to the model. However, if there is an incorrect prediction, the model is changed to make it correct. Additionally, a TfidfVectorizer can be used to calculate the frequency of certain words/names to train the model. The TfidfVectorizer will check the frequency of words in the dataset. An alternative or addition to the TfidfVectorizer would be the Decision Tree. There may be some trial and error periods testing different models and tracking performance based on each model to make the most efficient decision. Lastly, a docker container will be used at the end of the project. 
 
 ## Resources 
 
