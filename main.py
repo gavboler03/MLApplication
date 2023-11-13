@@ -7,8 +7,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-st.write("Here's our first attempt at using data to create a table:")
-
 # Load Data
 fake = pd.read_csv("Fake.csv")
 trueNew = pd.read_csv("True.csv")
@@ -48,6 +46,7 @@ pac.fit(tfidf_train, Y_train)
 y_pred = pac.predict(tfidf_test)
 score = accuracy_score(Y_test, y_pred)
 print(f"Accuracy: {round(score*100,2)}%")
+
 
 # Confusion Matrix
 confusion_matrix(Y_test, y_pred, labels=[0, 1])
