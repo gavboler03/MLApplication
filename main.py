@@ -7,46 +7,48 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-# Load Data
-fake = pd.read_csv("Fake.csv")
-trueNew = pd.read_csv("True.csv")
 
-# Make a new column for fake and true datasets
-fake["Truth"] = 0
-trueNew["Truth"] = 1
+def Model():
+    # Load Data
+    fake = pd.read_csv("Fake.csv")
+    trueNew = pd.read_csv("True.csv")
 
-# Combine fake and true datasets
-news = pd.concat([fake, trueNew])
-news.head()
+    # Make a new column for fake and true datasets
+    fake["Truth"] = 0
+    trueNew["Truth"] = 1
 
-# Clean data
-news.dropna()
+    # Combine fake and true datasets
+    news = pd.concat([fake, trueNew])
+    news.head()
 
-# Get labels
-truth = news.Truth
-truth.head()
-news.columns
+    # Clean data
+    news.dropna()
 
-# Split dataset
-X_train, X_test, Y_train, Y_test = train_test_split(
-    news["story"], truth, test_size=0.2, random_state=7
-)
+    # Get labels
+    truth = news.Truth
+    truth.head()
+    news.columns
 
-# Use the TfidfVectorizer
-tfidf_vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
+    # Split dataset
+    X_train, X_test, Y_train, Y_test = train_test_split(
+        news["story"], truth, test_size=0.2, random_state=7
+    )
 
-tfidf_train = tfidf_vectorizer.fit_transform(X_train)
-tfidf_test = tfidf_vectorizer.transform(X_test)
+    # Use the TfidfVectorizer
+    tfidf_vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
 
-# Initialize PassiveAggresive Classifier
-pac = PassiveAggressiveClassifier(max_iter=50)
-pac.fit(tfidf_train, Y_train)
+    tfidf_train = tfidf_vectorizer.fit_transform(X_train)
+    tfidf_test = tfidf_vectorizer.transform(X_test)
 
-# Set Accuracy
-y_pred = pac.predict(tfidf_test)
-score = accuracy_score(Y_test, y_pred)
-print(f"Accuracy: {round(score*100,2)}%")
+    # Initialize PassiveAggresive Classifier
+    pac = PassiveAggressiveClassifier(max_iter=50)
+    pac.fit(tfidf_train, Y_train)
 
+    # Set Accuracy
+    y_pred = pac.predict(tfidf_test)
+    score = accuracy_score(Y_test, y_pred)
+    acc = f"Accuracy: {round(score*100,2)}%"
 
-# Confusion Matrix
-confusion_matrix(Y_test, y_pred, labels=[0, 1])
+    # Confusion Matrix
+    confusion_matrix(Y_test, y_pred, labels=[0, 1])
+    return acc
