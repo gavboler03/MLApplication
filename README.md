@@ -27,3 +27,7 @@ https://github.com/gavboler03/MLApplication
 7. Click the submit button. The output will either be `This news is real` or `This news is fake.`
 8. Refresh the page if you want to input another news article
 9. When finished, enter `Ctrl + C` to stop the docker container and `docker compose down` to bring down the docker container.
+
+## Results
+
+Initial model test had a 99% accuracy on the training data.
