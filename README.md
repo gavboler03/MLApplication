@@ -23,3 +23,7 @@ https://github.com/gavboler03/MLApplication
 3. Navigate to your working directory with `cd path/to/working/directory`.
 4. Run the command `docker compose up --build`.
 5. Go to web browser and navigate to `http://localhost:8501`.
+6. Input the contents of a news article into the prompt.
+7. Click the submit button. The output will either be `This news is real` or `This news is fake.`
+8. Refresh the page if you want to input another news article
+9. When finished, enter `Ctrl + C` to stop the docker container and `docker compose down` to bring down the docker container.
