@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import streamlit as st
 
 
-def Model(input_data):
+def Model():
     # Load Data
     fake = pd.read_csv("Fake.csv")
     trueNew = pd.read_csv("True.csv")
@@ -44,19 +44,21 @@ def Model(input_data):
 
     # Set Confusion Matrix
     confusion_matrix(Y_test, y_pred, labels=[0, 1])
-    if y_pred[1] == 0:
-        return "This is fake news."
-    else:
-        return "This is real news."
+
+    for the_pred in y_pred:
+        if the_pred == 0:
+            return "This article is fake."
+        else:
+            return "This article is real."
 
 
 def main():
     st.title("Fake News Detector")
-    news_input = st.text_input("Paste news article here.")
+    st.text_input("Paste a news article here.")
     answer = ""
 
     if st.button("Submit"):
-        answer = Model(news_input)
+        answer = Model()
 
     st.success(answer)
 
