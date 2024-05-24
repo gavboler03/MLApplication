@@ -3,7 +3,9 @@ from fakeTrueDatasetModel import *
 
 def main():
     userInputArray = []
-    st.title("Fake News Detector")
+    st.title("Fake News Article Detector")
+    st.header("This is a news article detector and not fact checker")
+    st.subheader("For single line entries or entries such as 'George Washington was the first president of the USA.', it will return false.")
     userInput = st.text_input("Paste a news article here.")
     answer = ""
 

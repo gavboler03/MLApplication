@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-Fake news circulating is one of the main issues with media in the 21st century. Whether by malicious intent or ignorance, there is a fair bit of fake news that makes rounds through social media like Facebook and Twitter. We will tackle this problem by creating a model that can distinguish fake news from real news headlines. Sometimes all it may take is a headline to cause mass anger.
+Fake news articles circulating are one of the main issues with media in the 21st century. Whether by malicious intent or ignorance, there is a fair bit of fake news articles that makes rounds through social media like Facebook and Twitter. We will tackle this problem by creating a model that can distinguish fake news articles from real news headlines. Sometimes all it may take is a headline to cause mass anger. In a way to try and curve this, Samuel Flowers and Gavin Boler for a machine learning class project decided to create a machine learning model that can help distinguish between the two. As a reminder, this is not a fact checker and is not a search engine. This is just a model that determines what may be a real news article, such as from the BBC, and what is a fake article, such as from the Onion. 
 
 ## Approach
 
@@ -22,7 +22,7 @@ https://github.com/gavboler03/MLApplication
 2. Open the Terminal.
 3. Navigate to your working directory with `cd path/to/working/directory`.
 4. Run the command `docker compose up --build`.
-5. Go to web browser and navigate to `http://localhost:8501`.
+5. Go to web browser and navigate to the address given in the command terminal.
 6. Input the contents of a news article into the prompt.
 7. Click the submit button. The output will either be `This news is real` or `This news is fake.`
 8. Refresh the page if you want to input another news article
