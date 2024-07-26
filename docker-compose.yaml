@@ -3,7 +3,7 @@ version: "3.9"
 services:
   app:
     build: ./
-    command: streamlit run MLApplication/frontend.py --server.port 8501
+    command: streamlit run MLApplication/frontend.py --server.port 8501 && echo "go to url http:localhost:8501 instead"
     ports:
       - 8501:8501
-    image: yourstreamlitapp:latest
+    image: fakenewsarticleimage:fakenewsarticleimage
