@@ -1,0 +1,17 @@
+# Exported from Render on 2024-07-29T16:30:26Z
+services:
+- type: web
+  name: fakenewsarticleimage:fakenewsarticleimage
+  runtime: image
+  image:
+    url: docker.io/sfowers51/fakenewsarticleimage:fakenewsarticleimage
+  plan: free
+  region: ohio
+- type: web
+  name: fakenewsarticleimage:latest
+  runtime: image
+  image:
+    url: docker.io/sfowers51/fakenewsarticleimage:latest
+  plan: free
+  region: oregon
+version: "1"
